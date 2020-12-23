@@ -1,3 +1,8 @@
+/* 
+Front-End Developer : Furkan Köseoğlu
+http://furkankoseoglu.com/
+*/
+
 V = {
     urlData: "", // Global değişkenler
 
@@ -55,14 +60,43 @@ V = {
     slider:{
 
         Swiper: function(){
-            var swiper = new Swiper('.swiper-container', {
-                navigation: {
-                  nextEl: '.swiper-button-next',
-                  prevEl: '.swiper-button-prev',
+            var swiper = new Swiper('.main-slider', {
+                //  autoplay: {
+                //      delay: 2500,
+                //      disableOnInteraction: false,
+                //    },
+                pagination: {
+                  el: '.swiper-pagination',
+                  
+                }
+               
+              });
+
+              var sponsor = new Swiper('.clients-slider', {
+                slidesPerView: 2,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  },
+                pagination: {
+                  el: '.swiper-pagination',
+                  dynamicBullets: true,
                 },
+                breakpoints: {
+                   
+                    960: {
+                      slidesPerView: 4
+                    },
+                  }
               });
         }
 
+    },
+
+    bg:{
+     
     },
 
     buttons:{
@@ -131,6 +165,9 @@ V = {
 
     global: function () {
 
+        V.slider.Swiper();
+
+
         // Detect Device
         var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 
@@ -149,18 +186,31 @@ V = {
             });
         });
 
-        //Notification Menu
-        $(".notification .numbers .wrap").click(function () {
+        // Menu
+        $("#features .menu li").click(function () {
 
-            $(".notification .numbers .wrap").removeClass("active");
+            $("#features .menu li").removeClass("active");
             $(this).addClass("active");
 
             var numberID = $(this).attr("id");
 
-            $(".notification .people .wrap").removeClass("active animate__animated animate__faster animate__bounceInDown");
-            $(".notification .people " + "#" + numberID).addClass("active animate__animated animate__faster animate__bounceInDown");
-
+            $("#features .content").removeClass("active animate__animated animate__fadeIn");
+            $("#features .content" + "#" + numberID).addClass("active animate__animated animate__fadeIn");
         });
+
+        //Footer Menu
+        $("#footer-top .menu li").click(function () {
+
+            $("#footer-top .menu li").removeClass("active");
+            $(this).addClass("active");
+
+            var numberID = $(this).attr("id");
+
+            $("#footer-top .content").removeClass("active animate__animated animate__fadeIn");
+            $("#footer-top .content" + "#" + numberID).addClass("active animate__animated animate__fadeIn");
+        });
+
+       
 
     },
 
