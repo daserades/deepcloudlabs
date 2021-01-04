@@ -2,11 +2,6 @@
 Front-End Developer : Furkan Köseoğlu
 http://furkankoseoglu.com/
 */
-
-a:link{
-    color:#0090cf !important;
-}
-
 body{
     font-family: 'Gilroy';
     font-size:14px;
@@ -48,7 +43,7 @@ section{
     background:#fff !important;
 }
 .main-slider .wrap{
-    background:#333;
+    background:#000;
 }
 
 .btn-main{
@@ -68,13 +63,9 @@ section{
     -ms-transition: .2s;
     -o-transition: .2s;
 }
-.btn-main:link
-{
-    color:#fff !important;
-}
 
 .btn-main:hover{
-    color:#0090cf;
+    color:#0090cf !important;
     background: #fff;
     transition: .2s;
     -webkit-transition: .2s;
@@ -109,6 +100,8 @@ section{
 }
 
 nav{
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
     position: absolute !important;
     top:0 !important;
     background-color:transparent !important;
@@ -117,16 +110,22 @@ nav{
     font-weight: 500;
     color:#fff;
     width:100%;
-    padding-top:20px !important;
+}
+button:focus {
+    outline:none;
 }
 .bg-light {
-    background-color:transparent !important;
+    background-color: rgb(0,0,0,0.1) !important;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
 }
 .navbar-light .navbar-nav .nav-link{
     color:#fff;
     padding-bottom:5px;
     border-bottom:2px solid transparent;
     margin:0 20px;
+    font-weight: bold;
     transition: .2s;
     -webkit-transition: .2s;
     -moz-transition: .2s;
@@ -145,10 +144,13 @@ nav{
 #navbarNav{
     justify-content: flex-end;
 }
+.navbar-brand{
+    display:block;
+    margin-left: 9.2%;
+}
 .navbar-brand img{
-    width:50%;
-    margin-top: -15px;
-    margin-left:15px;
+    width: 70%;
+    margin-top: 0px;
 }
 
 .title{
@@ -178,14 +180,13 @@ nav{
 .main-slider img{
     height: 90vh;
     object-fit: cover;
-    opacity:0.75;
 }
 .main-slider .text{
     position: absolute;
     top:25%;
     color:#fff;
     left:10%;
-    width:35%;
+    width:40%;
 }
 
 .main-slider .title{
@@ -832,8 +833,11 @@ footer .social a:hover{
  }
 
  .main-slider .swiper-pagination{
-    left: -39%;
-     bottom:10%;
+    bottom: 10%;
+    width: 100%;
+    text-align: left;
+    left: 10%;
+    cursor:pointer;
  }
  .main-slider .swiper-pagination-bullet{
     background:white !important;
@@ -886,4 +890,57 @@ footer .social a:hover{
 }
 .adress{
     line-height: 2;
+}
+
+#banner{
+    width:100%;
+    height:40vh;
+}
+#banner .wrap{
+    width:100%;
+}
+#banner img{
+    height:40vh;
+    width:100%;
+    object-fit: cover;
+}
+#banner .text .title{
+    position: absolute;
+    color:#fff;
+    left:0;
+    right:0;
+    top:18vh;
+}
+.content .text{
+    font-size:16px;
+}
+.content .text-area{
+    padding:0 15px;
+    text-align: justify;
+}
+.content .text-area img{
+    padding:5%;
+}
+.last-post .main-title{
+    font-size:18px;
+    margin-bottom:15px;
+}
+.last-post .post .title{
+    font-size:16px;
+    margin-top:10px;
+    text-align: left;
+}
+.last-post .post{
+  margin-bottom: 35px;
+}
+.last-post .post img{
+ height:150px;
+ object-fit: cover;
+}
+.last-post .post:after{
+    content: "";
+    width:15%;
+    height:1px;
+    position: absolute;
+    background:#0090cf;
 }

@@ -65,6 +65,7 @@ http://furkankoseoglu.com/
 @media(max-device-width: 1024px) {
     .main-slider img {
         height: 60vh;
+        opacity:0.8;
     }
     .main-slider {
         height: 60vh;
@@ -83,11 +84,13 @@ nav{
     padding-right: 0 !important; 
 }
 .navbar-toggler{
-    margin-right:15px;
-    margin-bottom: 15px;
-    color: rgba(255,255,255,.9) !important;
-    border-color: rgba(255,255,255,.5) !important;
+    margin:15px;
+    margin-left: auto;
+
+    color: #fff !important;
+    border-color: #fff !important;
     padding: 0.55rem .75rem;
+    
 }
 #navbarNav{
     background: #fff;
@@ -102,7 +105,10 @@ nav{
 }
     .main-slider .text {
         width: 60%;
+        top: 25%;
+
     }
+
     .main-slider .title {
         font-size: 24px;
     }
@@ -113,10 +119,16 @@ nav{
     .main-slider{
         height:70vh;
     }
-
+    .navbar-brand img {
+        width: 80%;
+    }
+    .navbar-brand {
+    width: 70%;
+}
     .main-slider img{
         height:70vh;
         object-fit: cover;
+        object-position: 70%;
     }
     .btn-main {
         font-size:14px;
@@ -130,9 +142,12 @@ nav{
     .boxes{
         display:block;
     }
-
+    .main-slider .wrap .desc{
+        display:none;
+    }
     .boxes .box {
         margin: 10px 0;
+        width:100%;
     }
     #our-trainings .content {
         display: block;
@@ -202,10 +217,12 @@ nav{
         float:unset;
     }
 
-    .main-slider .swiper-pagination {
-        left:0;
-        bottom:10px;
-    }
+    .main-slider .swiper-pagination{
+
+        text-align: center;
+        left: 0;
+        bottom:2%;
+     }
     .main-slider .swiper-pagination-bullet-active:before {
         bottom: -3px; 
     }
@@ -220,6 +237,10 @@ nav{
     }
     #contact-us  {
         padding-bottom: 35px;
+    }
+    .content .text-area {
+        margin-bottom:35px;
+        
     }
 }
 
@@ -268,5 +289,9 @@ nav{
     .main-slider img {
         height: 80vh;
     }
+    .btn-main {
+        font-size: 12px;
+    }
+
 }
 

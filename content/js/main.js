@@ -61,13 +61,14 @@ V = {
 
         Swiper: function(){
             var swiper = new Swiper('.main-slider', {
-                //  autoplay: {
-                //      delay: 2500,
-                //      disableOnInteraction: false,
-                //    },
+                 autoplay: {
+                     delay: 2500,
+                     disableOnInteraction: false,
+                   },
+                   simulateTouch:true,
                 pagination: {
                   el: '.swiper-pagination',
-                  
+                  clickable:true
                 }
                
               });
