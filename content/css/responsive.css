@@ -79,6 +79,17 @@ http://furkankoseoglu.com/
 /* iPhone 4 & 4S */
 
 @media(max-device-width: 960px ) and (max-width: 960px){
+    .wide-content .textarea{
+        padding: 20px;
+        bottom: -75%;
+    }
+    .wide-content {
+        margin-bottom: 60%;
+        height:255px;
+    }
+    .wide-content img{
+        height:255px;
+    }
 nav{
     padding-left:0 !important;
     padding-right: 0 !important; 
@@ -247,7 +258,9 @@ nav{
 /* Tablets */
 
 @media(max-device-width: 768px) and (max-width: 768px){
-/* insert styles here */
+    footer .menu ul {
+        margin-top:0px;
+    }
 }
 
 /* Android - General Smartphone */
@@ -263,7 +276,9 @@ nav{
         left: -0.2rem;
         bottom: -0.2rem;
     }
-
+    footer .menu ul {
+        margin-top:35px;
+    }
 }
 
 /* Slim Smartphone */
